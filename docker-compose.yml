@@ -1,0 +1,7 @@
+version: "3"
+services:
+  cassandra:
+    image: cassandra
+    container_name: cassandra-workshop
+    ports:
+      - 9042:9042
