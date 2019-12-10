@@ -36,7 +36,7 @@ def cassandraConnection(addr):
     session.set_keyspace('dev')
 
     # Create table
-    session.execute("create table IF NOT EXISTS temp (PRIMARY KEY(place, value), event_time timestamp, place varchar, value int)")
+    session.execute("create table IF NOT EXISTS temp (PRIMARY KEY(event_time, place), event_time timestamp, place varchar, value int)")
 
     return session
 
